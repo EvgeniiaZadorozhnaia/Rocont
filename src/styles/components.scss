@@ -1,0 +1,379 @@
+@use "./variables.scss" as *;
+@use "./utils.scss" as *;
+
+.c-button {
+  font: $button;
+  border-radius: 4rem;
+  padding: 1.6rem;
+  padding-left: 2.4rem;
+  display: flex;
+  gap: 0.8rem;
+  border: none;
+  background-color: $white-color;
+  color: $dark-text-color;
+  cursor: pointer;
+
+  &__accent {
+    color: $white-color;
+    background-color: $accent-color;
+  }
+
+  &.slider {
+    padding: 0;
+    border-radius: 5rem;
+    cursor: pointer;
+  }
+
+  &:active .arrow {
+    --bg: #1f8b48;
+    --arrow: #ffffff;
+  }
+}
+
+.c-header {
+  padding: 1.6rem 3.6rem 1.6rem 2.4rem;
+  margin: 0.8rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $white-color;
+  border-radius: 2.4rem;
+
+  .c-nav {
+    &__list {
+      list-style: none;
+      display: flex;
+      gap: 3.2rem;
+    }
+
+    &__item {
+      font-weight: 500;
+      font-size: $m;
+    }
+
+    &__item a {
+      color: $dark-text-color;
+    }
+
+    &__item a.is-active {
+      background-color: $accent-color;
+      color: $white-color;
+      padding: 0.8rem 1.6rem;
+      border-radius: 4rem;
+    }
+  }
+}
+
+.c-hero {
+  position: relative;
+  height: 46.1rem;
+  overflow: hidden;
+
+  &__video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2.4rem;
+    z-index: 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding: 6.4rem;
+    color: $white-color;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3.2rem;
+    flex: 2;
+  }
+
+  &__title {
+    font: $h1;
+  }
+
+  &__desc {
+    font: $lead;
+    padding-right: 25%;
+  }
+
+  &__info {
+    font: $body;
+    align-self: flex-end;
+    text-align: end;
+    flex: 1.4;
+  }
+}
+
+.c-form {
+  margin-top: 9.6rem;
+  border-radius: 2.4rem;
+  background-color: $accent-color;
+  display: flex;
+  color: $white-color;
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    flex: 1;
+    padding: 6.4rem;
+  }
+
+  &__title {
+    font: $h2;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    font: $lead;
+  }
+
+  &__item {
+    display: flex;
+    gap: 0.8rem;
+    align-items: center;
+  }
+
+  &__item img {
+    height: 2.4rem;
+    width: 2.4rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 6.4rem;
+    gap: 1.6rem;
+    align-items: flex-start;
+
+    .form_inputs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+  }
+
+  &__input {
+    padding: 0.8rem 1.6rem 0.8rem 2.4rem;
+    border-radius: 4rem;
+    outline: none;
+    border: none;
+    font: $body;
+    width: 100%;
+  }
+
+  &__agreement {
+    font: $note;
+
+    &-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 2.4rem;
+
+      .c-form__checkbox {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      .c-form__agreement {
+        position: relative;
+        font: $note;
+        padding-left: 3.2rem;
+        cursor: pointer;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 2.4rem;
+          height: 2.4rem;
+          background-image: url("/icons/unchecked.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          transition: background-image 0.2s ease;
+        }
+      }
+
+      .c-form__checkbox:checked + .c-form__agreement::before {
+        background-image: url("/icons/checked.svg");
+      }
+    }
+  }
+}
+
+.c-slider {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 9.6rem;
+  overflow: hidden;
+
+  &__preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 23.6rem;
+  }
+
+  &__title {
+    font: $h2;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 0.8rem;
+    overflow: hidden;
+    scroll-snap-type: x mandatory;
+  }
+
+  &__card {
+    position: relative;
+    background: var(--bg-img) center/cover no-repeat;
+    min-width: 30rem;
+    min-height: 45rem;
+    border-radius: 2.4rem;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 3.2rem;
+
+    &.card-gradient::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        $gradient-from 31.3%,
+        $accent-color 100%
+      );
+      border-radius: 2.4rem;
+    }
+
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      z-index: 1;
+      color: $white-color;
+    }
+
+    &-title {
+      font: $h4;
+    }
+
+    &-text {
+      font: $body;
+    }
+  }
+}
+
+.c-contacts {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 9.6rem;
+  justify-content: space-between;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 3.2rem;
+    background-color: $white-color;
+    padding: 6.4rem;
+    border-radius: 2.4rem;
+    align-items: flex-start;
+    flex: 1.06;
+    color: $dark-text-color;
+
+    h2 {
+      font: $h2;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+      font: $lead;
+
+      li {
+        display: flex;
+        gap: 0.8rem;
+      }
+
+      .phones {
+        display: flex;
+        gap: 3.2rem;
+      }
+    }
+  }
+
+  &__map {
+    flex: 0.94;
+    max-width: 54.5rem;
+    border-radius: 2.4rem;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 2.4rem;
+    }
+  }
+}
+
+.c-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 3.2rem 0;
+
+  &__nav {
+    ul {
+      list-style: none;
+      display: flex;
+      font: $body;
+      gap: 3.2rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 1.6rem;
+      }
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 3.2rem;
+    font: $body;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 1.6rem;
+    }
+  }
+}

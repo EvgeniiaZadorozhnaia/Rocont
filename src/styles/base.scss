@@ -1,0 +1,22 @@
+@use "./variables.scss" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // 1 rem = 10px
+}
+
+body {
+  background-color: $main-bg-color;
+  font-family: "Tilda Sans VF", sans-serif;
+  background-image: url("/images/bg.png");
+}
+
+a {
+  text-decoration: none;
+  color: $dark-text-color;
+}

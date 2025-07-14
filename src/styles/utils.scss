@@ -1,0 +1,15 @@
+.arrow {
+  --bg: #FFF;
+  --arrow: #1F8B48;
+  display: inline-block;
+}
+
+.arrow--green {
+  --bg: #1F8B48;
+  --arrow: #FFFFFF;
+}
+
+.arrow--right{
+  transform: rotate(180deg);
+}
+

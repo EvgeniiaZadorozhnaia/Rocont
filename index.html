@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/images/logo_icon.svg" />
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+    <link
+      href="https://db.onlinewebfonts.com/c/032a90ddfd4eeea0749b095b2cb968e9?family=Gropled"
+      rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rocont</title>
+  </head>
+  <body>
+    <svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="arrow-icon" viewBox="0 0 48 20" fill="none">
+        <g clip-path="url(#clip0)">
+          <rect
+            width="20"
+            height="48"
+            rx="10"
+            transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)"
+            fill="var(--bg, #F6F6F6)" />
+          <path
+            d="M14 0V0C14 5.52285 9.52285 10 4 10V10"
+            stroke="var(--arrow, #2E2D2B)"
+            stroke-width="2" />
+          <path
+            d="M14.125 20V20C14.125 14.4772 9.64785 10 4.125 10H4H58"
+            stroke="var(--arrow, #2E2D2B)"
+            stroke-width="2" />
+        </g>
+        <defs>
+          <clipPath id="clip0">
+            <rect
+              width="20"
+              height="48"
+              rx="10"
+              transform="matrix(4.37114e-08 1 1 -4.37114e-08 0 0)"
+              fill="white" />
+          </clipPath>
+        </defs>
+      </symbol>
+    </svg>
+
+    <div class="l-container">
+      <header class="c-header">
+        <a href="https://rocont.ru/" class="c-logo"
+          ><img src="/images/logo.svg" alt="логотип компании ROCONT"
+        /></a>
+        <nav class="c-nav">
+          <ul class="c-nav__list">
+            <li class="c-nav__item"><a href="">О системе</a></li>
+            <li class="c-nav__item"><a href="">Архитектура</a></li>
+            <li class="c-nav__item"><a href="">Мнения</a></li>
+            <li class="c-nav__item"><a href="">Попробовать</a></li>
+            <li class="c-nav__item"><a href="">Для своих </a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="c-hero">
+          <video
+            src="/videos/hero.mp4"
+            autoplay
+            muted
+            loop
+            playsinline
+            class="c-hero__video"></video>
+
+          <div class="c-hero__content">
+            <div class="c-hero__left">
+              <h1 class="c-hero__title">Просто потому что можем</h1>
+              <p class="c-hero__desc">
+                Мы запустили основной цикл в 06:42. Результаты наблюдаются, но
+                не зафиксированы. Рекомендуем сохранять спокойствие до
+                следующего сигнала.
+              </p>
+              <a href="" class="c-button c-button__accent"
+                >Попробовать просто так
+                <svg class="arrow arrow--right" width="48" height="20">
+                  <use href="#arrow-icon"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="c-hero__info">
+              <p>Сертификат есть. Но это не точно.</p>
+              <p>СГР №AM.01.01 .01.003.R.00 o47 4.06.24</p>
+            </div>
+          </div>
+        </section>
+        <section class="c-slider">
+          <div class="c-slider__preview">
+            <h2 class="c-slider__title">Это — не совсем то, что вы думаете</h2>
+            <div class="c-slider__buttons">
+              <button class="c-button slider" aria-label="Назад">
+                <svg class="arrow arrow--left" width="48" height="20">
+                  <use href="#arrow-icon"></use>
+                </svg>
+              </button>
+              <button class="c-button slider" aria-label="Вперёд">
+                <svg class="arrow arrow--right" width="48" height="20">
+                  <use href="#arrow-icon"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="c-slider__cards">
+            <article
+              class="c-slider__card card-gradient"
+              style="--bg-img: url('/images/img1.jpg')">
+              <div class="c-slider__card-info">
+                <h3 class="c-slider__card-title">Немного упругости</h3>
+                <p class="c-slider__card-text">
+                  Чуть-чуть сияния, и ощущение, что вы о себе позаботились
+                </p>
+              </div>
+            </article>
+            <article
+              class="c-slider__card"
+              style="--bg-img: url('/images/img2.jpg')"></article>
+            <article
+              class="c-slider__card"
+              style="--bg-img: url('/images/img3.jpg')"></article>
+            <article
+              class="c-slider__card"
+              style="--bg-img: url('/images/img4.jpg')"></article>
+          </div>
+        </section>
+        <section class="c-form">
+          <div class="c-form__left">
+            <h2 class="c-form__title">
+              Если вы тоже решили «а почему бы и нет»
+            </h2>
+            <ul class="c-form__list">
+              <li class="c-form__item">
+                <img src="/icons/list_item.svg" alt="Элемент списка" />Можно
+                заказать много
+              </li>
+              <li class="c-form__item">
+                <img src="/icons/list_item.svg" alt="Элемент списка" />Доступ
+                возможен через северный интерфейс
+              </li>
+              <li class="c-form__item">
+                <img src="/icons/list_item.svg" alt="Элемент списка" />Можно
+                просто поболтать
+              </li>
+            </ul>
+          </div>
+          <form class="c-form__form" action="">
+            <div class="form_inputs">
+              <input type="text" class="c-form__input" placeholder="Имя" />
+              <input type="tel" class="c-form__input" placeholder="Телефон" />
+              <div class="c-form__agreement-wrapper">
+                <input type="checkbox" class="c-form__checkbox" id="agree" />
+                <label for="agree" class="c-form__agreement">
+                  Согласен(-на) на обработку чего угодно - лишь бы форма
+                  работала
+                </label>
+              </div>
+            </div>
+            <button type="submit" class="c-button">
+              Отправить<svg
+                class="arrow--green arrow--right"
+                width="48"
+                height="20">
+                <use href="#arrow-icon"></use>
+              </svg>
+            </button>
+          </form>
+        </section>
+        <section class="c-contacts">
+          <div class="c-contacts__info">
+            <h2>Контакты</h2>
+            <ul>
+              <li>
+                <img src="/icons/place.svg" alt="Место" />Офис, где делают
+                странные, но симпатичные вещи
+              </li>
+              <li>
+                <img src="/icons/time.svg" alt="Время работы" />Пн-Пт с 10:00 до
+                20:00
+              </li>
+              <div class="phones">
+                <li>
+                  <img src="/icons/phone.svg" alt="Номер телефона" />8 (800) 444
+                  44 44
+                </li>
+                <li>
+                  <img src="/icons/phone.svg" alt="Номер телефона" />8 (800) 888
+                  88 88
+                </li>
+              </div>
+              <li>
+                <img
+                  src="/icons/email.svg"
+                  alt="Электронная почта" />example@mail.ru
+              </li>
+            </ul>
+            <a href="" class="c-button c-button__accent"
+              >Связаться
+              <svg class="arrow arrow--right" width="48" height="20">
+                <use href="#arrow-icon"></use>
+              </svg>
+            </a>
+          </div>
+          <div class="c-contacts__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7337.497231943171!2d37.619395871313685!3d55.75203359942814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2spl!4v1752481454135!5m2!1sru!2spl"
+              allowfullscreen=""
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </section>
+      </main>
+
+      <footer class="c-footer">
+        <nav class="c-footer__nav">
+          <ul>
+            <div>
+              <li><a href="#">О системе</a></li>
+              <li><a href="#">Состав</a></li>
+            </div>
+            <div>
+              <li><a href="#">Архитектура</a></li>
+              <li><a href="#">Отзывы</a></li>
+            </div>
+
+            <li><a href="#">Для своих</a></li>
+          </ul>
+        </nav>
+
+        <div class="c-footer__info">
+          <ul>
+            <li><p>Коллаген © 2025</p></li>
+            <li><a href="#">Политика обработки чего-то личного</a></li>
+          </ul>
+
+          <div class="c-footer__logo">
+            <img src="/images/logo.svg" alt="логотип компании ROCONT" />
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./src/main.js"></script>
+  </body>
+</html>

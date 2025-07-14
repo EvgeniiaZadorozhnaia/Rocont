@@ -1,0 +1,8 @@
+.l-container {
+  max-width: 116rem;
+  margin: 0 auto;
+
+  @media (max-width: 960px) {
+    max-width: 94rem;
+  }
+}
