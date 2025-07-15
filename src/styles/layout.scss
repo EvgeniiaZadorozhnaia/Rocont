@@ -1,8 +1,8 @@
 .l-container {
-  max-width: 116rem;
+  max-width: 1160px;
   margin: 0 auto;
 
-  @media (max-width: 960px) {
-    max-width: 94rem;
+  @media (max-width: 1200px) {
+    max-width: 95%;
   }
 }

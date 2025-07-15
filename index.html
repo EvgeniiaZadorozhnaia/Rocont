@@ -44,16 +44,19 @@
 
     <div class="l-container">
       <header class="c-header">
-        <a href="https://rocont.ru/" class="c-logo"
+        <a href="https://rocont.ru/"
           ><img src="/images/logo.svg" alt="логотип компании ROCONT"
         /></a>
-        <nav class="c-nav">
-          <ul class="c-nav__list">
-            <li class="c-nav__item"><a href="">О системе</a></li>
-            <li class="c-nav__item"><a href="">Архитектура</a></li>
-            <li class="c-nav__item"><a href="">Мнения</a></li>
-            <li class="c-nav__item"><a href="">Попробовать</a></li>
-            <li class="c-nav__item"><a href="">Для своих </a></li>
+        <button class="c-header__menu-toggle" aria-label="Меню">
+          <img src="/icons/menu_toggle.svg" alt="Меню" />
+        </button>
+        <nav class="c-header__nav">
+          <ul>
+            <li><a href="">О системе</a></li>
+            <li><a href="">Архитектура</a></li>
+            <li><a href="">Мнения</a></li>
+            <li><a href="">Попробовать</a></li>
+            <li><a href="">Для своих </a></li>
           </ul>
         </nav>
       </header>
@@ -67,10 +70,13 @@
             playsinline
             class="c-hero__video"></video>
 
-          <div class="c-hero__content">
-            <div class="c-hero__left">
-              <h1 class="c-hero__title">Просто потому что можем</h1>
-              <p class="c-hero__desc">
+          <div class="c-hero__content u-padding">
+            <div class="c-hero__content-left">
+              <h1 class="u-hero__title">
+                Просто потому<br />
+                что можем
+              </h1>
+              <p class="u-lead_text">
                 Мы запустили основной цикл в 06:42. Результаты наблюдаются, но
                 не зафиксированы. Рекомендуем сохранять спокойствие до
                 следующего сигнала.
@@ -82,16 +88,18 @@
                 </svg>
               </a>
             </div>
-            <div class="c-hero__info">
-              <p>Сертификат есть. Но это не точно.</p>
-              <p>СГР №AM.01.01 .01.003.R.00 o47 4.06.24</p>
+            <div class="c-hero__content-info u-note_text">
+              <p>
+                Сертификат есть. Но это не точно. <br />СГР №AM.01.01
+                .01.003.R.00 o47 4.06.24
+              </p>
             </div>
           </div>
         </section>
-        <section class="c-slider">
+        <section class="c-slider u-section">
           <div class="c-slider__preview">
-            <h2 class="c-slider__title">Это — не совсем то, что вы думаете</h2>
-            <div class="c-slider__buttons">
+            <h2 class="u-h2__title">Это — не совсем то, что вы думаете</h2>
+            <div class="c-slider__preview-buttons">
               <button class="c-button slider" aria-label="Назад">
                 <svg class="arrow arrow--left" width="48" height="20">
                   <use href="#arrow-icon"></use>
@@ -106,57 +114,50 @@
           </div>
           <div class="c-slider__cards">
             <article
-              class="c-slider__card card-gradient"
+              class="card-gradient"
               style="--bg-img: url('/images/img1.jpg')">
-              <div class="c-slider__card-info">
-                <h3 class="c-slider__card-title">Немного упругости</h3>
-                <p class="c-slider__card-text">
+              <div>
+                <h4 class="u-h4__title">Немного упругости</h4>
+                <p class="u-body_text">
                   Чуть-чуть сияния, и ощущение, что вы о себе позаботились
                 </p>
               </div>
             </article>
-            <article
-              class="c-slider__card"
-              style="--bg-img: url('/images/img2.jpg')"></article>
-            <article
-              class="c-slider__card"
-              style="--bg-img: url('/images/img3.jpg')"></article>
-            <article
-              class="c-slider__card"
-              style="--bg-img: url('/images/img4.jpg')"></article>
+            <article style="--bg-img: url('/images/img2.jpg')"></article>
+            <article style="--bg-img: url('/images/img3.jpg')"></article>
+            <article style="--bg-img: url('/images/img4.jpg')"></article>
           </div>
         </section>
-        <section class="c-form">
-          <div class="c-form__left">
-            <h2 class="c-form__title">
-              Если вы тоже решили «а почему бы и нет»
+        <section class="c-form u-section">
+          <div class="c-form__left u-padding">
+            <h2 class="u-h2__title">
+              Если вы тоже решили <br />«а почему бы и нет»
             </h2>
-            <ul class="c-form__list">
-              <li class="c-form__item">
+            <ul class="u-lead_text">
+              <li>
                 <img src="/icons/list_item.svg" alt="Элемент списка" />Можно
                 заказать много
               </li>
-              <li class="c-form__item">
+              <li>
                 <img src="/icons/list_item.svg" alt="Элемент списка" />Доступ
                 возможен через северный интерфейс
               </li>
-              <li class="c-form__item">
+              <li>
                 <img src="/icons/list_item.svg" alt="Элемент списка" />Можно
                 просто поболтать
               </li>
             </ul>
           </div>
-          <form class="c-form__form" action="">
-            <div class="form_inputs">
-              <input type="text" class="c-form__input" placeholder="Имя" />
-              <input type="tel" class="c-form__input" placeholder="Телефон" />
-              <div class="c-form__agreement-wrapper">
-                <input type="checkbox" class="c-form__checkbox" id="agree" />
-                <label for="agree" class="c-form__agreement">
-                  Согласен(-на) на обработку чего угодно - лишь бы форма
-                  работала
-                </label>
-              </div>
+          <form class="u-padding" action="">
+            <div class="c-form_inputs">
+              <input type="text" placeholder="Имя" class="u-body_text" />
+              <input type="tel" placeholder="Телефон" class="u-body_text" />
+            </div>
+            <div class="c-form_inputs-agreement">
+              <input type="checkbox" id="agree" />
+              <label for="agree">
+                Согласен(-на) на обработку чего угодно - лишь бы форма работала
+              </label>
             </div>
             <button type="submit" class="c-button">
               Отправить<svg
@@ -168,10 +169,10 @@
             </button>
           </form>
         </section>
-        <section class="c-contacts">
-          <div class="c-contacts__info">
-            <h2>Контакты</h2>
-            <ul>
+        <section class="c-contacts u-section">
+          <div class="c-contacts__info u-padding">
+            <h2 class="u-h2__title">Контакты</h2>
+            <ul class="u-lead_text">
               <li>
                 <img src="/icons/place.svg" alt="Место" />Офис, где делают
                 странные, но симпатичные вещи
@@ -212,7 +213,7 @@
         </section>
       </main>
 
-      <footer class="c-footer">
+      <footer class="c-footer u-body_text">
         <nav class="c-footer__nav">
           <ul>
             <div>
@@ -228,15 +229,15 @@
           </ul>
         </nav>
 
-        <div class="c-footer__info">
-          <ul>
-            <li><p>Коллаген © 2025</p></li>
-            <li><a href="#">Политика обработки чего-то личного</a></li>
-          </ul>
+        <ul class="c-footer__info">
+          <li><p>Коллаген © 2025</p></li>
+          <li><a href="#">Политика обработки чего-то личного</a></li>
+        </ul>
 
-          <div class="c-footer__logo">
-            <img src="/images/logo.svg" alt="логотип компании ROCONT" />
-          </div>
+        <hr class="c-footer__sep" />
+
+        <div class="c-footer__logo">
+          <img src="/images/logo.svg" alt="логотип компании ROCONT" />
         </div>
       </footer>
     </div>

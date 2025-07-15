@@ -27,4 +27,19 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: "smooth",
     });
   });
+
+  const menuToggle = document.querySelector(".c-header__menu-toggle");
+  const nav = document.querySelector(".c-header__nav");
+
+  menuToggle.addEventListener("click", (e) => {
+    e.stopPropagation();
+    nav.classList.add("is-open");
+  });
+
+  document.body.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      nav.classList.remove("is-open");
+    }
+  });
+
 });
