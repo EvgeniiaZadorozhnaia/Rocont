@@ -41,6 +41,10 @@
           color: $white-color;
           padding: 0.8rem 1.6rem;
           border-radius: 4rem;
+
+          @media (max-width: 800px) {
+            border-radius:1rem;
+          }
         }
       }
     }
