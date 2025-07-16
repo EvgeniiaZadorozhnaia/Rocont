@@ -8,7 +8,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: $white-color;
-  border-radius: 2.4rem;
   margin: 0.8rem 0;
 
   @media (max-width: 830px) {
@@ -102,7 +101,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 2.4rem;
     z-index: 0;
 
     @media (max-width: 480px) {
@@ -125,6 +123,8 @@
 
     @media (max-width: 480px) {
       flex-direction: column;
+      padding-right: 0;
+      padding-left: 0;
     }
 
     &-left {
@@ -135,21 +135,18 @@
       flex: 2;
 
       @media (max-width: 480px) {
-        gap: 1.2rem;
         h1 {
           position: absolute;
-          top: -70%;
+          top: -55%;
+          left: 5%;
           width: 50%;
 
-          @media (max-width: 400px) {
+          @media (max-width: 320px) {
             position: static;
             width: 100%;
+            color: $dark-text-color;
           }
         }
-      }
-
-      @media (max-width: 400px) {
-        gap: 0.8rem;
       }
 
       p {
@@ -159,7 +156,7 @@
           padding-right: 0;
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 480px) {
           color: $dark-text-color;
         }
       }
@@ -169,11 +166,12 @@
       align-self: flex-end;
       text-align: end;
       flex: 1.4;
+      line-height: 150%;
 
       @media (max-width: 480px) {
         align-self: flex-start;
-        margin-top: 1.2rem;
         text-align: start;
+        margin-top: 2rem;
       }
 
       @media (max-width: 400px) {
@@ -189,7 +187,6 @@
 
   @media (max-width: 830px) {
     flex-direction: column;
-    gap: 1.6rem;
   }
 
   &__preview {
@@ -230,23 +227,12 @@
       background: var(--bg-img) center/cover no-repeat;
       min-width: 30rem;
       min-height: 45rem;
-      border-radius: 2.4rem;
       scroll-snap-align: start;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: flex-end;
       padding: 3.2rem;
-
-      @media (max-width: 640px) {
-        min-width: 25rem;
-        min-height: 32rem;
-        padding: 2.4rem;
-      }
-
-      @media (max-width: 480px) {
-        min-height: 28rem;
-      }
 
       &.card-gradient::before {
         content: "";
@@ -272,7 +258,6 @@
 }
 
 .c-form {
-  border-radius: 2.4rem;
   background-color: $accent-color;
   color: $white-color;
 
@@ -399,7 +384,6 @@
     flex-direction: column;
     gap: 3.2rem;
     background-color: $white-color;
-    border-radius: 2.4rem;
     align-items: flex-start;
     flex: 1;
     color: $dark-text-color;
@@ -419,25 +403,22 @@
       .phones {
         display: flex;
         gap: 3.2rem;
-      }
-    }
 
-    @media (max-width: 400px) {
-      a {
-        width: 100%;
+        @media (max-width: 320px) {
+          flex-direction: column;
+          gap: 1.6rem;
+        }
       }
     }
   }
 
   &__map {
     flex: 1;
-    border-radius: 2.4rem;
 
     iframe {
       width: 100%;
       height: 100%;
       border: none;
-      border-radius: 2.4rem;
 
       @media (max-width: 900px) {
         min-height: 25rem;
@@ -451,13 +432,9 @@
   justify-content: space-between;
   padding: 3.2rem 0;
 
-  @media (max-width: 830px) {
+  @media (max-width: 640px) {
     flex-direction: column;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 1.2rem;
-    padding: 1.6rem 0;
+    gap: 2rem;
   }
 
   &__nav {
@@ -467,7 +444,7 @@
       display: flex;
       gap: 3.2rem;
 
-      @media (max-width: 400px) {
+      @media (max-width: 320px) {
         flex-direction: column;
         gap: 1.6rem;
       }
@@ -479,13 +456,8 @@
       }
     }
 
-    @media (max-width: 830px) {
+    @media (max-width: 640px) {
       order: 2;
-      padding: 3.2rem 0;
-    }
-
-    @media (max-width: 400px) {
-      padding: 1.6rem 0;
     }
   }
 
@@ -494,20 +466,15 @@
     display: flex;
     flex-direction: column;
     gap: 1.6rem;
-    flex: 1.2;
+    flex: 0.9;
 
-    @media (max-width: 830px) {
+    @media (max-width: 640px) {
       order: 4;
-      padding-top: 3.2rem;
-    }
-
-    @media (max-width: 400px) {
-      padding: 1.6rem 0;
     }
   }
 
   &__logo {
-    @media (max-width: 830px) {
+    @media (max-width: 640px) {
       order: 1;
     }
   }
@@ -515,14 +482,11 @@
   &__sep {
     display: none;
 
-    @media (max-width: 830px) {
+    @media (max-width: 640px) {
       display: block;
       order: 3;
       height: 2px;
       color: $dark-text-color;
     }
-  }
-
-  @media (max-width: 830px) {
   }
 }

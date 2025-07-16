@@ -8,6 +8,10 @@
 
 html {
   font-size: 10px;
+
+  @media (max-width: 960px) {
+    font-size: 8px;
+  }
 }
 
 body {
@@ -19,4 +23,8 @@ body {
 a {
   text-decoration: none;
   color: $dark-text-color;
+
+  @media (max-width: 400px) {
+    width: 100%;
+  }
 }

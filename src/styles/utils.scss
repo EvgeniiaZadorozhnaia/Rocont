@@ -44,78 +44,42 @@
     --bg: #1f8b48;
     --arrow: #ffffff;
   }
-
-  @media (max-width: 960px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 1.6rem;
-    padding: 1.2rem;
-  }
 }
 
 .u-hero__title {
   font: $h1;
 
-  @media (max-width: 960px) {
-    font-size: 3.2rem;
-  }
-
-  @media (max-width: 400px) {
-    color: $dark-text-color;
+  @media (max-width: 640px) {
+    font-size: 4rem;
   }
 }
 
 .u-h2__title {
   font: $h2;
 
-  @media (max-width: 960px) {
-    font-size: 2.8rem;
+  @media (max-width: 640px) {
+    font-size: 3.5rem;
+    padding-bottom: 1rem;
   }
 }
 
 .u-h4__title {
   font: $h4;
-
-  @media (max-width: 960px) {
-    font-size: 2rem;
-  }
 }
 
 .u-lead_text {
   font: $lead;
-
-  @media (max-width: 960px) {
-    font-size: 1.8rem;
-  }
-
-  @media (max-width: 400px) {
-    font-size: 1.2rem;
-  }
 }
 
 .u-body_text {
   font: $body;
-
-  @media (max-width: 640px) {
-    font-size: 1.2rem;
-  }
 }
 
 .u-padding {
   padding: 6.4rem;
 
-  @media (max-width: 960px) {
-    padding: 4.8rem;
-  }
-
   @media (max-width: 640px) {
-    padding: 2.4rem;
-  }
-
-  @media (max-width: 400px) {
-    padding: 1.2rem;
+    padding: 3.2rem;
   }
 }
 
@@ -124,19 +88,19 @@
   gap: 0.8rem;
   margin-top: 9.6rem;
 
-  @media (max-width: 960px) {
-    margin-top: 6.4rem;
-  }
-
   @media (max-width: 480px) {
-    margin-top: 3.2rem;
+    margin-top: 3rem;
   }
 }
 
 .u-note_text {
   font: $note;
 
-  @media (max-width: 640px) {
+  @media (max-width: 480px) {
     color: $dark-text-color;
   }
+}
+
+.u-border {
+  border-radius: 2.4rem;
 }
